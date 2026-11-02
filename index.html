@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Mystery Room</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #101426;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        .container {
+            max-width: 750px;
+            margin: auto;
+            background: #1c2541;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        h1 {
+            color: #f7c948;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            color: #f7c948;
+            margin: 25px 0 15px;
+        }
+
+        p {
+            line-height: 1.7;
+        }
+
+        .suspect {
+            background: #303b5c;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+        }
+
+        button {
+            background: #f7c948;
+            color: #101426;
+            border: none;
+            padding: 12px 22px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        button:hover {
+            background: #ffdf70;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #70e1a1;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🔍 AI MYSTERY ROOM</h1>
+
+    <p>Welcome, Detective! Solve the mystery using the clues.</p>
+
+    <h2>💎 The Missing Diamond Case</h2>
+
+    <p>
+        A precious diamond disappeared from a museum last night.
+        Three people were present. Find out who stole it!
+    </p>
+
+    <h2>🕵️ Suspects</h2>
+
+    <div class="suspect">
+        <h3>1. Security Guard</h3>
+        <p>He was responsible for protecting the museum.</p>
+    </div>
+
+    <div class="suspect">
+        <h3>2. Museum Manager</h3>
+        <p>He had access to the diamond room.</p>
+    </div>
+
+    <div class="suspect">
+        <h3>3. Cleaner</h3>
+        <p>She was cleaning near the exhibition room.</p>
+    </div>
+
+    <h2>🔎 Evidence</h2>
+
+    <p>📱 Evidence 1: A message says the diamond room was opened at 9 PM.</p>
+    <p>📹 Evidence 2: CCTV shows someone entering the room.</p>
+    <p>📝 Evidence 3: The security register has a suspicious entry.</p>
+
+    <h2>⚖️ Who is the culprit?</h2>
+
+    <button onclick="checkAnswer('guard')">Security Guard</button>
+    <button onclick="checkAnswer('manager')">Manager</button>
+    <button onclick="checkAnswer('cleaner')">Cleaner</button>
+
+    <div id="result"></div>
+
+</div>
+
+<script>
+    function checkAnswer(person) {
+        const result = document.getElementById("result");
+
+        if (person === "manager") {
+            result.innerHTML =
+                "🎉 Correct! The Manager is the culprit. Mystery Solved!";
+        } else {
+            result.innerHTML =
+                "❌ Incorrect! Study the evidence and try again.";
+        }
+    }
+</script>
+
+</body>
+</html>
